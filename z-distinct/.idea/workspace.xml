@@ -26,8 +26,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="51" selection-start-line="51" selection-end-line="55" selection-end-column="37" />
+            <state relative-caret-position="160">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -69,11 +69,6 @@
             <path>
               <item name="z_distinct" type="b2602c69:ProjectViewProjectNode" />
               <item name="z-distinct" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="z_distinct" type="b2602c69:ProjectViewProjectNode" />
-              <item name="z-distinct" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -121,23 +116,22 @@
       <option name="presentableId" value="Default" />
       <updated>1543050007057</updated>
       <workItem from="1543050010081" duration="38000" />
-      <workItem from="1543050250334" duration="4782000" />
+      <workItem from="1543050250334" duration="5047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4820000" />
+    <option name="totallyTimeSpent" value="5085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28661972" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28661972" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" weight="0.32969698" />
       <window_info anchor="bottom" id="CMake" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3987879" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3987879" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -185,8 +179,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="51" selection-start-line="51" selection-end-line="55" selection-end-column="37" />
+        <state relative-caret-position="160">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
