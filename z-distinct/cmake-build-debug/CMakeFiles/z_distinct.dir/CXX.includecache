@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/slawiko/workspace/practice_text_processing_algorithms/z-distinct/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+
