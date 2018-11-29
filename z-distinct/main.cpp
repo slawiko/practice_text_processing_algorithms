@@ -56,6 +56,5 @@ int main() {
     out << calculate_distinct_cnt(s);
     out.close();
 
-
     return 0;
 }
