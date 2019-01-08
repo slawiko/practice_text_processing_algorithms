@@ -10,6 +10,7 @@ std::string calculate_diff(std::string &s1, std::string &s2, int n) {
     char diff = 0;
     int skipped = 0;
     char* result = new char[n];
+    int result_size = 0;
     for (int i = 0; i < n; i++) {
         if (!is_char(s2[i])) {
             skipped++;
@@ -21,23 +22,23 @@ std::string calculate_diff(std::string &s1, std::string &s2, int n) {
         }
 
         result[i - skipped] = diff + 'a' - 1;
+        result_size++;
     }
 
-    return std::string(result);
+    return std::string(result, result_size);
 }
 
 std::string min_cyclic_shift(std::string s) {
     s += s;
     int n = (int) s.length();
-    int i=0, ans=0;
-    while (i < n/2) {
+    int i = 0, ans = 0;
+    while (i < n / 2) {
         ans = i;
-        int j=i+1, k=i;
+        int j = i + 1, k = i;
         while (j < n && s[k] <= s[j]) {
             if (s[k] < s[j]) {
                 k = i;
-            }
-            else {
+            } else {
                 ++k;
             }
             ++j;
@@ -46,18 +47,53 @@ std::string min_cyclic_shift(std::string s) {
             i += j - k;
         }
     }
-    return s.substr(ans, n/2);
+
+    return s.substr(ans, n / 2);
 }
 
 void readlines(int n, std::string &s, std::ifstream &in) {
     int read = 0;
     std::string buffer;
 
-    while(n - read > 0) {
+    while (n - read > 0) {
         std::getline(in, buffer);
         s += buffer;
         read += buffer.size();
     }
+}
+
+void prefix_function(unsigned int* pi, std::string s) {
+    int n = (int) s.length();
+    for (int i = 1; i < n; ++i) {
+        unsigned int j = pi[i - 1];
+        while (j > 0 && s[i] != s[j]) {
+            j = pi[j - 1];
+        }
+        if (s[i] == s[j]) ++j;
+        pi[i] = j;
+    }
+}
+
+void print(unsigned int* v, int n) {
+    for (int i = 0; i < n; ++i) {
+        std::cout << v[i];
+    }
+}
+
+int period_size(unsigned int* pi, int n) {
+    int last = n - 1;
+    int size = n;
+
+    while (last > 0) {
+        if (size % (size - pi[last]) == 0) {
+            return size - pi[last];
+        }
+
+        last--;
+        size--;
+    }
+
+    return 0;
 }
 
 int main() {
@@ -74,7 +110,16 @@ int main() {
     in.close();
 
     std::string diff = calculate_diff(s1, s2, n);
-    std::string shift = min_cyclic_shift(diff);
+    int diff_size = (int) diff.length();
+
+    unsigned int* pi = new unsigned int[diff_size];
+    for (int i = 0; i < diff_size; ++i) {
+        pi[i] = 0;
+    }
+    prefix_function(pi, diff);
+
+    int period = period_size(pi, diff_size);
+    out << min_cyclic_shift(diff.substr(0, period));
 
     out.close();
 
