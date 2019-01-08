@@ -17,7 +17,7 @@ std::string calculate_diff(std::string &s1, std::string &s2, int n) {
             continue;
         }
         diff = s2[i] - s1[i];
-        if (diff < 0) {
+        if (diff <= 0) {
             diff += 26;
         }
 
@@ -58,7 +58,7 @@ void readlines(int n, std::string &s, std::ifstream &in) {
     while (n - read > 0) {
         std::getline(in, buffer);
         s += buffer;
-        read += buffer.size();
+        read += buffer.length();
     }
 }
 
@@ -69,14 +69,16 @@ void prefix_function(unsigned int* pi, std::string s) {
         while (j > 0 && s[i] != s[j]) {
             j = pi[j - 1];
         }
-        if (s[i] == s[j]) ++j;
+        if (s[i] == s[j]) {
+            ++j;
+        }
         pi[i] = j;
     }
 }
 
 void print(unsigned int* v, int n) {
     for (int i = 0; i < n; ++i) {
-        std::cout << v[i];
+        std::cout << v[i] << ' ';
     }
 }
 
@@ -84,7 +86,7 @@ int period_size(unsigned int* pi, int n) {
     int last = n - 1;
     int size = n;
 
-    while (last > 0) {
+    while (size > 0) {
         if (size % (size - pi[last]) == 0) {
             return size - pi[last];
         }
@@ -93,7 +95,7 @@ int period_size(unsigned int* pi, int n) {
         size--;
     }
 
-    return 0;
+    return n;
 }
 
 int main() {
