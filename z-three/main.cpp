@@ -20,7 +20,7 @@ unsigned int getmax(const unsigned int* v, int n) {
     return max;
 }
 
-unsigned int* z_function(unsigned int* z, std::string &s, int n) {
+void z_function_wo_overlap(unsigned int* z, std::string &s, int n) {
     for (unsigned int i = 1, l = 0, r = 0; i < n; ++i) {
         if (i <= r) {
             z[i] = min(r - i + 1, z[i - l]);
@@ -33,8 +33,6 @@ unsigned int* z_function(unsigned int* z, std::string &s, int n) {
         }
     }
     minimize(z, n);
-
-    return z;
 }
 
 void bufferize(const unsigned int* z, unsigned int* buffer, int n, int start) {
@@ -56,7 +54,7 @@ std::string three(std::string &s) {
     std::string suffix;
     for (unsigned int i = 0; i < n; ++i) {
         suffix = s.substr(i);
-        z_function(z, suffix, n - i);
+        z_function_wo_overlap(z, suffix, n - i);
         max = getmax(z, n - i);
         l = i;
         size = buffer[i] < max ? buffer[i] : max;
