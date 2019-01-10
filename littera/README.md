@@ -25,7 +25,7 @@
 Единственная строка должна содержать искомый ключ. Если задача имеет несколько решений, выведите наименьшее из них в лексикографическом порядке.
 
 ### Примеры
-|                                          littera.in                                                               | littera.out |
-|-------------------------------------------------------------------------------------------------------------------|-------------|
-| 8<br/>Crusader•<br/>Egrupagg•<br/>                                                                                | bow         |
-| 41<br/>To be or not t•<br/>o be? What is the question!•<br/>Yp ru aw oej ft cu?•<br/> Mtfu yi fmf gkqxuyez!•<br/> | apple       |
+|                                          littera.in                                                                    | littera.out |
+|------------------------------------------------------------------------------------------------------------------------|-------------|
+| 8<br/>Crusader•<br/>Egrupagg•<br/>                                                                                     | bow         |
+| 41<br/>To be or not t•<br/>o be? What is the question!•<br/>Yp ru aw oej ft cu?•<br/>&nbsp;Mtfu yi fmf gkqxuyez!•<br/> | apple       |
