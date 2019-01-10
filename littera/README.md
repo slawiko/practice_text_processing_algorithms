@@ -27,12 +27,12 @@
 ### Примеры
 |                                          littera.in                                          | littera.out |
 |:--------------------------------------------------------------------------------------------:|:-----------:|
-| 8                                                                                            | bow         |
-| Crusader•                                                                                    |             |
-| Egrupagg•                                                                                    |             |
+| 8<br/>                                                                                       | bow         |
+| Crusader•<br/>                                                                               |             |
+| Egrupagg•<br/>                                                                               |             |
 |----------------------------------------------------------------------------------------------|-------------|
-| 41                                                                                           | apple       |
-| To be or not t•                                                                              |             |
-| o be? What is the question!•                                                                 |             |
-| Yp ru aw oej ft cu?•                                                                         |             |
-|  Mtfu yi fmf gkqxuyez!•                                                                      |             |
+| 41<br/>                                                                                      | apple       |
+| To be or not t•<br/>                                                                         |             |
+| o be? What is the question!•<br/>                                                            |             |
+| Yp ru aw oej ft cu?•<br/>                                                                    |             |
+|  Mtfu yi fmf gkqxuyez!•<br/>                                                                 |             |
