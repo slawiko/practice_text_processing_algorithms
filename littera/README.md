@@ -27,5 +27,12 @@
 ### Примеры
 |                                          littera.in                                          | littera.out |
 |:--------------------------------------------------------------------------------------------:|:-----------:|
-| 8 Crusader• Egrupagg•                                                                        | bow         |
-| 41 To be or not t• o be? What is the question!• Yp ru aw oej ft cu?•  Mtfu yi fmf gkqxuyez!• | apple       |
+| 8                                                                                            | bow         |
+| Crusader•                                                                                    |             |
+| Egrupagg•                                                                                    |             |
+|----------------------------------------------------------------------------------------------|-------------|
+| 41                                                                                           | apple       |
+| To be or not t•                                                                              |             |
+| o be? What is the question!•                                                                 |             |
+| Yp ru aw oej ft cu?•                                                                         |             |
+|  Mtfu yi fmf gkqxuyez!•                                                                      |             |
