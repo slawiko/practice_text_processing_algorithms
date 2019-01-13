@@ -2,22 +2,6 @@
 #include <fstream>
 #include <vector>
 
-unsigned int min(unsigned int a, unsigned int b) {
-    return a <= b ? a : b;
-}
-
-void z_function(unsigned int* z, std::string &s) {
-    int n = (int) s.length();
-    for (int i = 1, l = 0, r = 0; i < n; ++i) {
-        if (i <= r)
-            z[i] = min(r - i + 1, z[i - l]);
-        while (i + z[i] < n && s[z[i]] == s[i + z[i]])
-            ++z[i];
-        if (i + z[i] - 1 > r)
-            l = i, r = i + z[i] - 1;
-    }
-}
-
 void prefix_function(unsigned int* pi, std::string s) {
     int n = (int) s.length();
     for (int i = 1; i < n; ++i) {
@@ -99,29 +83,7 @@ void print(unsigned int* v, int n) {
 }
 
 int period_size(unsigned int* pi, int n) {
-    int last = n - 1;
-    int size = n;
-
-    while (size > 0) {
-        if (size % (size - pi[last]) == 0) {
-            return size - pi[last];
-        }
-
-        last--;
-        size--;
-    }
-
-    return n;
-}
-
-int period_size_2(unsigned int* z, int n) {
-    for (int i = 0; i < n; ++i) {
-        if (i + z[i] == n) {
-            return i;
-        }
-    }
-
-    return n;
+    return n - pi[n - 1];
 }
 
 int main() {
@@ -140,17 +102,13 @@ int main() {
     std::string diff = calculate_diff(s1, s2, n);
     int diff_size = (int) diff.length();
 
-//    unsigned int* pi = new unsigned int[diff_size];
-    unsigned int* z = new unsigned int[diff_size];
+    unsigned int* pi = new unsigned int[diff_size];
     for (int i = 0; i < diff_size; ++i) {
-//        pi[i] = 0;
-        z[i] = 0;
+        pi[i] = 0;
     }
-//    prefix_function(pi, diff);
-    z_function(z, diff);
+    prefix_function(pi, diff);
 
-//    int period = period_size(pi, diff_size);
-    int period = period_size_2(z, diff_size);
+    int period = period_size(pi, diff_size);
     out << min_cyclic_shift(diff.substr(0, period));
 
     out.close();
